@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.card {
+  position: relative;
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 80%;
+  margin-bottom: 20px;
+  transition: all 0.2s ease;
+}
+
+.card.show {
+  background: url("./bg-img.jpg") repeat-x;
+  -webkit-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 2px 1px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card .ques {
+  font-size: larger;
+  font-weight: bold;
+  margin: 10px 20px;
+  margin-right: 40px;
+}
+
+.card .ans {
+  display: none;
+  margin: 10px 20px;
+}
+
+.card .ans.show {
+  display: block;
+}
+
+.card .faq-btn {
+  border: 2px solid black;
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-image: url("./arrow.png");
+  background-size: 15px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card.show .faq-btn {
+  background-image: url("./close.png");
+}
